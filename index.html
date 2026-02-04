@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN / COVER -->
+  <div id="cover" class="cover">
+    <div class="cover-box">
+      <p class="small">Undangan Pernikahan</p>
+      <h1 class="title">Aisyah & Fajar</h1>
+      <p class="desc">Kepada Yth:</p>
+      <h2 id="toName" class="to">Tamu Undangan</h2>
+      <button id="openBtn" class="btn">Buka Undangan</button>
+      <p class="hint">✨ Mohon aktifkan suara untuk musik</p>
+    </div>
+  </div>
+
+  <!-- MUSIC -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- FLOATING MUSIC BUTTON -->
+  <button id="musicBtn" class="music-btn">🔊</button>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent" class="hidden">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <p class="small">The Wedding Of</p>
+        <h1 class="title big">Aisyah & Fajar</h1>
+        <p class="date">Minggu, 12 Mei 2026</p>
+
+        <div class="countdown">
+          <div class="cd-box">
+            <span id="days">00</span>
+            <small>Hari</small>
+          </div>
+          <div class="cd-box">
+            <span id="hours">00</span>
+            <small>Jam</small>
+          </div>
+          <div class="cd-box">
+            <span id="minutes">00</span>
+            <small>Menit</small>
+          </div>
+          <div class="cd-box">
+            <span id="seconds">00</span>
+            <small>Detik</small>
+          </div>
+        </div>
+
+        <a class="btn" href="#acara">Lihat Acara</a>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="section quote">
+      <p>
+        “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu
+        dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya...”
+      </p>
+      <small>— QS. Ar-Rum: 21</small>
+    </section>
+
+    <!-- COUPLE -->
+    <section class="section couple">
+      <h2 class="section-title">Mempelai</h2>
+      <div class="couple-grid">
+        <div class="card">
+          <img src="img/bride.jpg" alt="Mempelai Wanita">
+          <h3>Aisyah Putri</h3>
+          <p>Putri dari Bapak Ahmad & Ibu Siti</p>
+        </div>
+
+        <div class="heart">💙</div>
+
+        <div class="card">
+          <img src="img/groom.jpg" alt="Mempelai Pria">
+          <h3>Fajar Nugroho</h3>
+          <p>Putra dari Bapak Budi & Ibu Rina</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT -->
+    <section id="acara" class="section event">
+      <h2 class="section-title">Detail Acara</h2>
+
+      <div class="event-grid">
+        <div class="event-card">
+          <h3>Akad Nikah</h3>
+          <p><b>Minggu, 12 Mei 2026</b></p>
+          <p>08.00 WIB - Selesai</p>
+          <p>Masjid Al-Ikhlas</p>
+        </div>
+
+        <div class="event-card">
+          <h3>Resepsi</h3>
+          <p><b>Minggu, 12 Mei 2026</b></p>
+          <p>11.00 WIB - 14.00 WIB</p>
+          <p>Gedung Serbaguna Bancak</p>
+        </div>
+      </div>
+
+      <div class="maps">
+        <h3>Lokasi Acara</h3>
+        <p>Tekan tombol di bawah untuk membuka Google Maps</p>
+        <a class="btn" target="_blank"
+          href="https://maps.google.com/?q=Gedung+Serbaguna+Bancak">
+          Buka Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery">
+      <h2 class="section-title">Galeri</h2>
+      <div class="gallery-grid">
+        <img src="img/1.jpg" alt="Foto 1">
+        <img src="img/2.jpg" alt="Foto 2">
+        <img src="img/3.jpg" alt="Foto 3">
+        <img src="img/4.jpg" alt="Foto 4">
+        <img src="img/5.jpg" alt="Foto 5">
+        <img src="img/6.jpg" alt="Foto 6">
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section rsvp">
+      <h2 class="section-title">Konfirmasi Kehadiran</h2>
+      <p class="center">Silakan isi form RSVP, nanti otomatis terkirim ke WhatsApp.</p>
+
+      <form id="rsvpForm" class="form">
+        <input type="text" id="nama" placeholder="Nama kamu" required />
+        <select id="status" required>
+          <option value="">Pilih Kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+          <option value="Masih Ragu">Masih Ragu</option>
+        </select>
+
+        <input type="number" id="jumlah" placeholder="Jumlah orang (contoh: 1)" min="1" max="10" required />
+        <textarea id="pesan" placeholder="Tulis doa/ucapan..." rows="4"></textarea>
+
+        <button class="btn" type="submit">Kirim RSVP</button>
+      </form>
+    </section>
+
+    <!-- WISHES -->
+    <section class="section wishes">
+      <h2 class="section-title">Ucapan & Doa</h2>
+
+      <div class="wish-box">
+        <div id="wishList" class="wish-list"></div>
+
+        <form id="wishForm" class="form mini">
+          <input type="text" id="wishName" placeholder="Nama" required />
+          <textarea id="wishText" placeholder="Ucapan..." rows="3" required></textarea>
+          <button class="btn" type="submit">Kirim Ucapan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Terima kasih atas doa dan kehadirannya 💙</p>
+      <small>© 2026 Aisyah & Fajar</small>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
